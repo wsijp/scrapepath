@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+
+<html>
+  <body>
+
+    The following block will record the "tea" item in the list. The surrounding ul tag is needed to differentiate this item from the other span of class cuppa.
+    <ul class = "my_list">
+      <span class = "cuppa" record = "text as favorite"></span>
+    </ul>
+
+    To record the other span of class cuppa:
+
+    <span class = "cuppa" record = "text as other_cuppa"></span>
+
+    To record the first five items in the list:
+
+    <ul class = "my_list">
+      <for items = "items" condition = "i < 5">
+        <li class ="my_item" record = "text as item_text">
+        </li>
+      </for>
+    </ul>
+
+    If dates are recorded, the condition in the for loop can be based on the date:
+
+    <ul class = "list_with_dates">
+      <for items = "items2" condition = "date < 2018/03/01">
+        <li record = "text as item_text"><span class = "my_date" record = "date as date"></span>
+        </li>
+      </for>
+    </ul>
+
+    Code blocks can be conditionally recorded within if statements:
+
+    <if condition = "favorite = Tea" >
+      <p class ="test_if" record = "text as if_text"></p>
+    </if>
+
+
+
+    <div class = "my_list">
+      <forchild items = "items_mixed" >
+        <div class ="my_item" record = "text as item_text"></div>
+        <p class ="milk_class" record = "text as item_text"></p>
+        <str record = "text as item_text"></div>
+      </forchild>
+    </div>
+
+    Follow recorded hyperlinks using the jump tag to scrape linked pages:
+
+    <a record = "href as my_link">
+      <jump on = "my_link">
+        <ibody>
+          <div class = "message" record = "text as msg"></div>
+        </ibody>
+      </jump>
+    <a>
+
+
+  </body>
+</html>
