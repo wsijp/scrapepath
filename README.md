@@ -18,9 +18,23 @@ pip install -r requirements.txt
 Usage
 -----
 
+To run an example, execute on the command line without arguments:
+
 ```bash
 ./parser
 ```
+
+To use within Python:
+
+```python
+from parser import NodeParser
+
+np = NodeParser(soup_template, soup, live_url)
+np.hop_template()
+print (json.dumps(np.result_dict, indent = 2, default = str))
+```
+
+Where `soup_template` is a `BeautifulSoup` of the template file, `soup` is a `BeautifulSoup` of the scraped page and `live_url` the url of the scraped page.
 
 Templates
 ---------

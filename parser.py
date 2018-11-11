@@ -972,8 +972,7 @@ class ForChildParser(ForParser):
 
 parse_table = {'forchild' : ForChildParser,'for' : ForParser, 'str' : StringParser, 'jump' : JumpParser, 'if' : IfParser, 'command' : CommandParser}
 
-
-if __name__ == "__main__":
+def example():
 
 	live_url = 'test_page.html'
 	template_url = 'test_template.html'
@@ -984,9 +983,15 @@ if __name__ == "__main__":
 		if len(sys.argv) > 2:
 			live_url = sys.argv[2]
 
+	print('Scraping "%s" using template "%s"'%(live_url, template_url))
+
 	soup_template = open_soup_file(template_url)
 	soup = open_soup_file(live_url)
 
 	np = NodeParser(soup_template, soup, live_url)
 	np.hop_template()
 	print (json.dumps(np.result_dict, indent = 2, default = str))
+
+if __name__ == "__main__":
+
+	example()
