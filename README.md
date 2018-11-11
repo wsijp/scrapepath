@@ -31,14 +31,16 @@ Templates consist of HTML files containing nested tags leading to the scraping e
 
 The parser is based on `BeautifulSoup`.
 
-Example 1 Record and for loops
-------------------------------
+Example 1 Scraping data
+-----------------------
 
 The following examples are from scaped pages `examples/example1a.html` and template `examples/scraped1.html`. Run the example using:
 
 `./parser.py examples/example1a.html examples/scraped1.html`
 
-To scrape:
+Scrape HTML by putting the relevant tag inside a template, and use a `record` attribute. Below, the item "Tea" is scraped using the `record` attribute. A path to the text is specified in terms of its enclosing tags.
+
+To scrape from:
 
 ```html
 
@@ -50,9 +52,7 @@ To scrape:
 
 ```
 
-the item "Tea" is scraped using the `record` attribute. A path to the text is specified in terms of its enclosing tags.
-
-Template:
+Use template:
 
 ```html
 <ul class = "my_list">
@@ -128,7 +128,7 @@ Example 2: for loops on mixed nodes
 
 In the following html, a `<for>` template loop node needs to enclose two template nodes, one for each tag (div and p) and class (my_item and milk_class):
 
-To scrape:
+To scrape from:
 
 ```html
 <div class = "my_list">
@@ -140,7 +140,7 @@ To scrape:
 </div>
 ```
 
-Template:
+Use template:
 
 ```html
 <div class = "my_list">
@@ -175,7 +175,7 @@ Example 3: Jumping to linked pages
 
 Follow links on pages using the `<jump>` template node:
 
-To scrape:
+To scrape from:
 
 ```html
 
@@ -183,7 +183,7 @@ To scrape:
 
 ```
 
-Template:
+Use template:
 
 ```html
     <a record = "href as my_link">
