@@ -2,7 +2,7 @@
 Scrapescript
 ------------
 
-HTML template parser for web scraping.
+Scrapescript is a web scraping syntax.
 
 
 Requirements
