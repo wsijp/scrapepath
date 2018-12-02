@@ -45,7 +45,7 @@ Templates consist of HTML files containing nested tags leading to the scraping e
 
 The parser is based on `BeautifulSoup`.
 
-Example 1 Scraping data
+Example 1: Scraping data
 -----------------------
 
 The following examples are from scaped pages `examples/example1a.html` and template `examples/scraped1.html`. Run the example using:
