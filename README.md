@@ -48,11 +48,11 @@ The parser is based on `BeautifulSoup`.
 Example 1: Scraping data
 -----------------------
 
-The following examples are from scaped pages `examples/example1a.html` and template `examples/scraped1.html`. Run the example using:
+The following examples are from scraped pages `examples/example1a.html` and template `examples/scraped1.html`. Run the example using:
 
 `./parser.py examples/example1a.html examples/scraped1.html`
 
-Scrape HTML by putting the relevant tag inside a template, and use a `record` attribute. Below, the item "Tea" is scraped using the `record` attribute. A path to the text is specified in terms of its enclosing tags.
+Scrape HTML by putting the relevant tag inside a template, and use a `record` attribute. Below, the item "Tea" is scraped from the target page using the `record` attribute in the template page. A path to the target text ("Tea") is specified in terms of its enclosing tags.
 
 To scrape from:
 
