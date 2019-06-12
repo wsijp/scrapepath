@@ -52,7 +52,7 @@ The following examples are from scraped pages `examples/example1a.html` and temp
 
 `./parser.py examples/example1a.html examples/scraped1.html`
 
-Scrape HTML by putting the relevant tag inside a template, and use a `record` attribute. Below, the item "Tea" is scraped from the target page using the `record` attribute in the template page. A path to the target text ("Tea") is specified in terms of its enclosing tags.
+This scrapes the target page `scraped1.html` using the `template example1a.html`, using a `record` attribute. Below, the item "Tea" is scraped from the target page using the `record` attribute in the template page. A path to the target text ("Tea") is specified in terms of its enclosing tags.
 
 To scrape from:
 
