@@ -1,8 +1,8 @@
 
-Scrapescript
-------------
+Scrapepath
+----------
 
-Scrapescript is a web scraping syntax.
+[Scrapepath](https://github.com/wsijp/scrapepath) is a templated web scraping syntax. [Scrapepath is pip installable](https://pypi.org/project/scrapepath/) via `pip install scrapepath`.
 
 
 Requirements
